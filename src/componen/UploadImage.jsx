@@ -20,7 +20,8 @@ const UploadImage = ({isExtractiEmage}) => {
 
 
         // for both
-        setUrlImageEmbed , setIsAllert, setAllertMessage
+        setUrlImageEmbed , setIsAllert, setAllertMessage,
+        isLoading, setIsLoading
 
 
     } = useContext(AppContext)
@@ -100,7 +101,10 @@ const UploadImage = ({isExtractiEmage}) => {
                 setImageWithSecretMessage(file)
                 setUrlImageEmbedExtract(imageUrl)
 
+             
+                setIsLoading(true)
                 setTimeout(()=>{
+                    setIsLoading(false)
                     setExtractedSecretMessage("testing asyn secret message")
                 },2000)
                 
