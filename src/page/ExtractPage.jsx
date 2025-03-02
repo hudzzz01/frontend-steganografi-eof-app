@@ -5,6 +5,7 @@ import { AppContext } from '../componen/context/AppProvider';
 import Loading from '../componen/Loading';
 import InsertKey from '../componen/InsertKey';
 import axios from 'axios';
+import Quotes from '../componen/Quotes';
 
 const ExtractPage = () => {
     const {extractedSecredMEssage,setExtractedSecretMessage, isLoading, imageWithSecretMessage,key, setIsLoading } = useContext(AppContext)
@@ -79,6 +80,7 @@ const ExtractPage = () => {
                 {isLoading ? <Loading/> : <></>}
              
                 {extractedSecredMEssage ? <DisplaySecretMessage/> : <></>}
+                <Quotes/>
     
 
             </form>

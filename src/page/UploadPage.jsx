@@ -5,6 +5,7 @@ import { AppContext } from "../componen/context/AppProvider";
 import ResultImage from "../componen/ResultImage";
 import Loading from "../componen/Loading";
 import axios from "axios";
+import Quotes from "../componen/Quotes";
 
 export default function UploadPage() {
 
@@ -86,6 +87,7 @@ export default function UploadPage() {
             {stegaImage ? <InsertSecretMessage /> : <></>}
             {isLoading ? <Loading/> : <></>}
             {resultOfStegaImageFromServer ? <ResultImage /> : <></>} 
+            <Quotes/>
         </form>
     </div>)
 }

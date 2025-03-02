@@ -176,7 +176,8 @@ const UploadImage = ({isExtractiEmage}) => {
 
 
                 <div className='d-flex justify-content-center color-dark-brown pb-5'>
-                    <p className='fs-1 kanit-light'>Upload {isExtractiEmage ? "Image has hidden message" : "Receptacle" } Image Here</p>
+                    <p className='fs-1 kanit-light mt-3 ms-5'>Upload {isExtractiEmage ? "Image has hidden message" : "Receptacle" } Image Here</p>
+                    <p className='me-4'>Click the image area please</p>
                 </div>
 
 
