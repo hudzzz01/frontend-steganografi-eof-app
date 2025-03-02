@@ -2,6 +2,7 @@
 
 import React, { useContext, useEffect, useRef } from 'react';
 import { AppContext } from './context/AppProvider';
+import axios from 'axios';
 
 
 const UploadImage = ({isExtractiEmage}) => {
@@ -17,11 +18,15 @@ const UploadImage = ({isExtractiEmage}) => {
         extractedSecredMEssage,setExtractedSecretMessage ,
         imageWithSecretMessage, setImageWithSecretMessage,
         urlImageEmbedExtract,setUrlImageEmbedExtract,
+    
 
 
         // for both
         setUrlImageEmbed , setIsAllert, setAllertMessage,
-        isLoading, setIsLoading
+        isLoading, setIsLoading,
+
+        //function
+        extractMessageFunction
 
 
     } = useContext(AppContext)
@@ -101,12 +106,10 @@ const UploadImage = ({isExtractiEmage}) => {
                 setImageWithSecretMessage(file)
                 setUrlImageEmbedExtract(imageUrl)
 
+           
+
+
              
-                setIsLoading(true)
-                setTimeout(()=>{
-                    setIsLoading(false)
-                    setExtractedSecretMessage("testing asyn secret message")
-                },2000)
                 
                 
             }else{
