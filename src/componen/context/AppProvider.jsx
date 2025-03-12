@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import imageThumnail from '../../assets/maskot_login.png';
 
+
 const AppContext = createContext()
 
 const AppProvider = ({children}) => {
@@ -33,6 +34,12 @@ const AppProvider = ({children}) => {
       
 
         try{
+       
+            
+            const host = meta.env.VITE_BE_HOST
+            console.log(host);
+            
+            return
             const res = await axios.post(  
                 "http://localhost:8888/api/v1/steganografy/steganografi/insertTextToImage",
                 formData,
@@ -56,7 +63,7 @@ const AppProvider = ({children}) => {
                 name : fileName,
                 key : key
             })
-            setIsloading(false)
+         
 
             // console.log(fileName);
             
@@ -71,6 +78,8 @@ const AppProvider = ({children}) => {
             
             console.log(e);
             
+        }finally{
+            setIsLoading(false)
         }
     }
 

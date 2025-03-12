@@ -9,7 +9,7 @@ const Footer = () => {
             </div>
             <div class="card-body bg-light-brown">
         
-                <p class="card-text color-dark-brown">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text color-dark-brown">steganography is an art.</p>
               
             </div>  
           

@@ -2,10 +2,13 @@
 
 import React, { useContext, useEffect, useRef } from 'react';
 import { AppContext } from './context/AppProvider';
+import imageThumnailExtract from '../assets/secure.svg';
 import axios from 'axios';
 
 
 const UploadImage = ({isExtractiEmage}) => {
+
+    
 
     const {  
         
@@ -136,6 +139,8 @@ const UploadImage = ({isExtractiEmage}) => {
             
         }
 
+        
+
 
 
     }
@@ -158,6 +163,7 @@ const UploadImage = ({isExtractiEmage}) => {
     }else{
         imageElement = <img src={urlImageEmbed} className='w-100 h-100 rounded'/>
     }
+
 
 
     return (

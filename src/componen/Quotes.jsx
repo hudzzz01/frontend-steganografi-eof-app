@@ -2,7 +2,7 @@ import React from 'react';
 
 const Quotes = () => {
     return (
-        <div className='d-flex justify-content-center align-items-center bg-light-brown' style={{height:"auto"}}>
+        <div className='d-flex py-5 justify-content-center align-items-center bg-light-brown' style={{height:"auto"}}>
             <div className="card bg-low-brown w-100 mx-5">
                 <div class="card-header">
                     Quote

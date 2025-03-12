@@ -29,11 +29,13 @@ export default function UploadPage() {
         formData.append("message", secretMessage)
 
         // send to backend
-      
+
+        const beHost = import.meta.env.VITE_BE_HOST
+        const uploadUrl = `${beHost}/api/v1/steganografy/steganografi/insertTextToImage`;
 
         try{
             const res = await axios.post(  
-                "http://localhost:8888/api/v1/steganografy/steganografi/insertTextToImage",
+                uploadUrl,
                 formData,
                 {
                     headers: {
@@ -67,6 +69,8 @@ export default function UploadPage() {
             console.log("gagal");
 
             alert("Cant conent to the backend")
+
+            alert(e.message)
             
             console.log(e);
             

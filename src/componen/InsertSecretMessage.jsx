@@ -16,7 +16,7 @@ const InsertSecretMessage = () => {
             <div className="collapse show" >
                 <div className="card card-body  bg-low-brown">
                     <div className="input-group">
-                        <span className="input-group-text bg-dark-brown color-light-brown kanit-light fs-8 rounded border-0"> <label htmlFor="inputMessage">
+                        <span className="input-group-text w-100 justify-content-center bg-dark-brown color-light-brown kanit-light fs-8 rounded border-0"> <label htmlFor="inputMessage">
                              Masukan Pesan Rahasia disini :
                             </label>
                 

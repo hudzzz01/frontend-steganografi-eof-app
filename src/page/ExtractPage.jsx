@@ -32,11 +32,16 @@ const ExtractPage = () => {
         formData.append("integer-key", key)
 
         // send to backend
+
+        const beHost = import.meta.env.VITE_BE_HOST
+        console.log(beHost, " ini be");
+        
+        const uploadUrl = `${beHost}/api/v1/steganografy/steganografi/extractSecretTextFromImage`;
       
 
         try{
             const res = await axios.post(  
-                "http://localhost:8888/api/v1/steganografy/steganografi/extractSecretTextFromImage",
+                uploadUrl,
                 formData,
                 {
                     headers: {
