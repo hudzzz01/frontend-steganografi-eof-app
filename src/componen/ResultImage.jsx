@@ -6,15 +6,15 @@ import axios from 'axios';
 const ResultImage = () => {
 
     const { resultOfStegaImageFromServer } = useContext(AppContext)
-
+    const beHost = import.meta.env.VITE_BE_HOST
     
 
     let urlImage,key,downloadUrl;
 
     if (resultOfStegaImageFromServer) {
-        urlImage = `http://localhost:8888/api/v1/steganografy/read/stegano-image/${resultOfStegaImageFromServer.name}`
+        urlImage = `${beHost}/api/v1/steganografy/read/stegano-image/${resultOfStegaImageFromServer.name}`
         key = resultOfStegaImageFromServer.key
-        downloadUrl = `http://localhost:8888/api/v1/steganografy/download/stegano-image/${resultOfStegaImageFromServer.name}`
+        downloadUrl = `${beHost}/api/v1/steganografy/download/stegano-image/${resultOfStegaImageFromServer.name}`
         
     } else {
         urlImage = imageThumnail

@@ -1,7 +1,6 @@
 import React, { createContext, useState } from 'react';
 import imageThumnail from '../../assets/maskot_login.png';
 
-
 const AppContext = createContext()
 
 const AppProvider = ({children}) => {
@@ -31,17 +30,12 @@ const AppProvider = ({children}) => {
         formData.append("message", secretMessage)
 
         // send to backend
+        const uploadUrl = `${beHost}/api/v1/steganografy/steganografi/insertTextToImage`;
       
 
         try{
-       
-            
-            const host = meta.env.VITE_BE_HOST
-            console.log(host);
-            
-            return
             const res = await axios.post(  
-                "http://localhost:8888/api/v1/steganografy/steganografi/insertTextToImage",
+                uploadUrl,
                 formData,
                 {
                     headers: {
